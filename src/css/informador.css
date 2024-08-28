@@ -1,0 +1,125 @@
+  .download-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-info button.download-btn {
+    flex-basis: 100%;
+    background-color: #337ab7;
+  }
+
+  .download-container h2 {
+    margin-top: 0;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .download-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #666;
+  }
+  
+  .download-container input[type="text"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .download-container .report-info {
+    margin-top: 20px;
+  }
+  
+  .download-container .report-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .download-container .btn {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .download-container .btn:hover {
+    background-color: #23527c;
+  }
+  
+  .download-container .btn:active {
+    background-color: #1d4a7a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .download-container .report-info p button {
+    margin-left: 10px;
+  }
+
+  .mode-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mode-buttons button {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #337ab7; /* changed to a blue color */
+    color: #fff; /* added white text color */
+    cursor: pointer;
+    transition: opacity 0.2s; /* add a transition effect for opacity */
+  }
+  
+  .mode-buttons button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .mode-buttons button:hover {
+    background-color: #23527c; /* changed to a darker blue color on hover */
+  }
+  
+  .mode-buttons button:active {
+    background-color: #1d4a73; /* changed to an even darker blue color on active */
+  }
+
+  .report-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .report-info button {
+    flex-basis: 45%; /* adjust the width of each button */
+    margin: 10px; /* add margin between buttons */
+    background-color: #337ab7; /* maintain original background color */
+    color: #fff; /* maintain original text color */
+    padding: 10px 20px; /* maintain original padding */
+    border: none; /* maintain original border */
+    border-radius: 5px; /* maintain original border radius */
+    cursor: pointer; /* maintain original cursor */
+    transition: background-color 0.2s ease; /* maintain original transition */
+  }
+  
+  .report-info button:hover {
+    background-color: #23527c; /* maintain original hover background color */
+  }
+  
+  .report-info button:active {
+    background-color: #1d4a7a; /* maintain original active background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* maintain original active box shadow */
+  }
