@@ -1,0 +1,33 @@
+.checklist-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checklist-title {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .checklist-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .checklist-list li {
+    margin-bottom: 10px;
+  }
+  
+  .checklist-list li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .checklist-list li span {
+    font-size: 16px;
+    color: #666;
+  }

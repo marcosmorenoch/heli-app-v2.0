@@ -1,6 +1,7 @@
 import React from "react";
 
 function NavBar() {
+
     return (
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -14,9 +15,9 @@ function NavBar() {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#">Creador de informes</a></li>
-        <li><a href="#">Registro de eventos</a></li>
-        <li><a href="#">Checklist</a></li>
+        <li class="active"><a href="home">Creador de informes</a></li>
+        <li><a href="registro">Registro de eventos</a></li>
+        <li><a href="checklist">Checklist</a></li>
       </ul>
     </div>
   </div>
