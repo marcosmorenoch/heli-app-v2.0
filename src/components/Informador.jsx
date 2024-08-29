@@ -56,8 +56,6 @@ function Informador() {
         setTransporte1(formattedTime)
         setDesfib(formattedTime)
     }
-
-
     const handleButton4 = () => {
         const formattedTime = getFormattedTime();
         setDestino1(formattedTime)
@@ -78,8 +76,6 @@ function Informador() {
         setToma2(formattedTime)
         setMedicacion2(formattedTime)
     }
-
-
     const handleButton8 = () => {
         const formattedTime = getFormattedTime();
         setTransporte2(formattedTime)
@@ -100,7 +96,6 @@ function Informador() {
         setDespegue3(formattedTime)
         setEnCarga(formattedTime)
     }
-
     const handleButton12 = () => {
         const formattedTime = getFormattedTime();
         setToma3(formattedTime)
@@ -114,9 +109,12 @@ function Informador() {
 
 
     const handleCreateFile = () => {
-        if(mode==="mode1") { tipoDeViaje = "Transporte aéreo"} else if (mode === "mode2") {tipoDeViaje = "Asistencia"}
+        let text = ""
+        if(mode==="mode1") { tipoDeViaje = "Transporte aéreo" } else if (mode === "mode2") { tipoDeViaje = "Asistencia" }
+        if(mode==="mode1") { text = `Arranque 1: ${arranque1}\nDespegue 1: ${despegue1}\nToma 1: ${toma1}\nTransporte 1: ${transporte1}\nDestino 1: ${destino1}\nArranque 2: ${arranque2}\nDespegue 2: ${despegue2}\nToma 2: ${toma2}\nTransporte 2: ${transporte2}\nDestino 2: ${destino2}\nArranque 3: ${arranque3}\nDespegue 3: ${despegue3}\nToma 3: ${toma3}\nDestino 3: ${destino3}`}
+        else if (mode==="mode2") { text = `Primer contacto: ${primContacto}\nExploración: ${exploracion}\nRCP: ${rcp}\nCardioversión: ${cardiov}\nMedicación 1: ${medicacion1}\nMedicación 2: ${medicacion2}\nEcografía: ${ecogr}\nAnalizador: ${analizador}\nActiva código: ${activC}\nEn carga: ${enCarga}\nTransferencia: ${transferencia}\nIntervención: ${intervencion}`}
         const [day, month, year, time] = date.split(/[\/ ]/);
-        const templateText = `INFORME DEL PACIENTE\nMODO: ${tipoDeViaje}\nFecha del accidente: ${day}/${month}/${year}\nHora de despegue: ${takeoff}\nHora de recogida: ${pickup}\nHora de aterrizaje: ${landing}`;
+        const templateText = `INFORME DEL PACIENTE\nMODO: ${tipoDeViaje}\nFecha del viaje: ${day}/${month}/${year}\n${text}`;
         const blob = new Blob([templateText], { type: 'text/plain' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
@@ -145,6 +143,38 @@ function Informador() {
             setMode(newMode);
         }
     };
+
+    const handleResetData = () => {
+        setArranque1("Arranque 1");
+        setDespegue1("Despegue 1");
+        setToma1("Toma 1");
+        setTransporte1("Transporte 1");
+        setDestino1("Destino 1");
+        setArranque2("Arranque 2");
+        setDespegue2("Despegue 2");
+        setToma2("Toma 2");
+        setTransporte2("Transporte 2");
+        setDestino2("Destino 2")
+        setArranque3("Arranque 3")
+        setDespegue3("Despegue 3")
+        setToma3("Toma 3")
+        setDestino3("Destino 3")
+
+        setPrimContacto("Primer contacto")
+        setExploracion("Exploración")
+        setRCP("RCP")
+        setDesfib("Desfibrilación")
+        setIOT("IOT")
+        setCardiov("Cardioversión")
+        setMedicacion1("Medicación 1")
+        setMedicacion2("Medicación 2")
+        setEcog("Ecografía")
+        setAnalizador("Analizador")
+        setActivC("Activa código")
+        setEnCarga("En carga")
+        setTransferencia("Transferencia")
+        setIntervecion("Intervención")
+    }
 
     return (
         <div className="download-container">
@@ -263,6 +293,12 @@ function Informador() {
                         backgroundColor: mode === "mode2" ? '#38761d' : '#073763'}}
                         onClick={handleCreateFile}>
                     Crear archivo con los datos
+                </button>
+
+                <button className="download-btn" style={{
+                        backgroundColor: mode === "mode2" ? '#38761d' : '#073763'}}
+                        onClick={handleResetData}>
+                    Reset
                 </button>
             </div>
         </div>
