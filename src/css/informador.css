@@ -114,6 +114,13 @@
     cursor: pointer; /* maintain original cursor */
     transition: background-color 0.2s ease; /* maintain original transition */
   }
+
+  @media only screen and (max-width: 600px) {
+    .report-info button {
+      flex-basis: 40%;
+  }
+}
+
   
   .report-info button:hover {
     background-color: #23527c; /* maintain original hover background color */
